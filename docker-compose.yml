@@ -1,0 +1,21 @@
+version: '3' 
+
+services:
+  frontend:
+    build: ./frontend 
+    volumes:
+      - weatherapp:/var/lib/docker/volumes/weather/_data
+    ports:
+      - "8081:8081"
+      
+  backend:
+    build: ./backend 
+    volumes:
+      - weatherapp:/var/lib/docker/volumes/weather/_data
+    ports:
+      - "8080:8080"
+
+volumes:
+  weatherapp:
+    external: true
+   

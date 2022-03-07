@@ -1,0 +1,21 @@
+version: '3' 
+
+services:
+
+  frontend:
+    build: ./frontend 
+
+  backend:
+    build: ./backend 
+
+  live-reloader:
+    image: apogiatzis/livereloading
+    container_name: livereloader
+    privileged: true
+    environment:
+      - RELOAD_DELAY=1              # seconds
+      - RELOAD_CONTAINER=weatherapp
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "weatherapp:/var/lib/docker/volumes/weatherapp"
+

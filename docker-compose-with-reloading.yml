@@ -14,8 +14,9 @@ services:
     privileged: true
     environment:
       - RELOAD_DELAY=1              # seconds
-      - RELOAD_CONTAINER=weatherapp
+      - RELOAD_CONTAINER=weatherapp-backend-1
+      - RELOAD_CONTAINER=weatherapp-frontend-1
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
-      - "weatherapp:/var/lib/docker/volumes/weatherapp"
+      - "weatherapp:/var/lib/docker/volumes/weatherapp_data"
 

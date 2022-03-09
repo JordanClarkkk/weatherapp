@@ -57,3 +57,14 @@ npm run start
 4. Open the app on the port specified in the terminal!
 
 
+### What I did
+
+1. Updated the API key in the 'appid' constant
+
+2. Created a simple Dockerfile for the backend and frontend (specifying directory, caching packages, specifying and exposing ports and specifying commands)
+
+3. Built the images
+
+4. Ran the images to containers to check everything was working
+
+5. 

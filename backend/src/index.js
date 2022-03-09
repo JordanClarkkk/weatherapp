@@ -9,7 +9,7 @@ const appId = process.env.APPID ||  '270cf2de3591875142ef949c638a11c3';
 const mapURI = process.env.MAP_ENDPOINT || "http://api.openweathermap.org/data/2.5";
 const targetCity = process.env.TARGET_CITY || "Helsinki,fi";
 
-const port = process.env.PORT || 9000;
+const port = process.env.PORT || 8080;
 
 const app = new Koa();
 

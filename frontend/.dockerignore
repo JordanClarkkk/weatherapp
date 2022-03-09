@@ -1,2 +1,5 @@
 # NODE
 node_modules
+# ANSIBLE PLAYBOOKS
+ansible-install-docker.yml
+ansible-weatherapp.yml

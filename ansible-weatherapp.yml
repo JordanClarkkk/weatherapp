@@ -1,0 +1,8 @@
+---
+- hosts: weatherapp
+  become: false
+  tasks: 
+
+    - name: run weatherapp
+      ansible.builtin.command: docker-compose -f docker-compose.yml -f docker-compose-with-reloading.yml up
+        

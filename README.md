@@ -4,9 +4,9 @@ Hei!
 
 I would like to say thank you for giving me the opportunity to attempt these tasks. I found them to be challenging, frustrating at times, and of course, rewarding. Through this README I will explain how to run the app both locally and with Docker, as well as how to install Docker and The Weather App using Ansible playbooks. 
 
-As I had never used any of these technologies before, this whole process was a huge learning experience for me, so I will go into detail about what I did in the tasks, the challenges I faced as well as how I solved issues.
+As I had never used any of these technologies before, this whole process was a huge learning experience for me, so I will go into detail about what I did for each of the tasks, the challenges I faced as well as how I solved some issues (SEE WIKI).
 
-## DOCKER
+## TO RUN THE APP WITH/WITHOUT DOCKER
 
 ### Clone this git repo using HTTPS
 
@@ -29,6 +29,7 @@ git clone https://github.com/JordanClarkkk/weatherapp.git weatherapp
 
 1. Open your terminal and type
 ```
+docker volume create weatherapp
 cd weatherapp
 docker-compose -f docker-compose.yml -f docker-compose-with-reloading.yml up
 ```
@@ -54,17 +55,4 @@ npm run start
 npm i
 npm run start
 ```
-4. Open the app on the port specified in the terminal!
-
-
-### What I did
-
-1. Updated the API key in the 'appid' constant
-
-2. Created a simple Dockerfile for the backend and frontend (specifying directory, caching packages, specifying and exposing ports and specifying commands)
-
-3. Built the images
-
-4. Ran the images to containers to check everything was working
-
-5. 
+4. Open the app on localhost:8081!

@@ -26,8 +26,8 @@ module.exports = {
     contentBase: 'src/public',
     historyApiFallback: true,
     disableHostCheck: true,
-    host: process.env.HOST || '0.0.0.0',
-    port: process.env.PORT || 8000,
+    host: process.env.HOST || 'localhost',
+    port: process.env.PORT || 8081,
   },
   output: {
     filename: '[name].[hash:8].js',

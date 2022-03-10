@@ -56,3 +56,59 @@ npm i
 npm run start
 ```
 4. Open the app on localhost:8081!
+
+## TO USE ANSIBLE PLAYBOOKS TO INSTALL DOCKER AND RUN THE APP
+
+##### Presuming you have already cloned the git repo and are in the appropriate directory, to use Ansible playbooks to automatically install Docker you should first:
+
+1. Have ansible installed (https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+
+2. Find your IP address by typing:
+```
+ip a
+```
+into your terminal.
+
+3. Configure Ansible hosts file: 
+```
+sudo nano /etc/ansible/hosts
+```
+
+4. Insert your machine:
+```
+[docker]
+insert.ip.address.here
+```
+
+5. Add Docker vars:
+```
+[docker:vars]
+ansible_user=type-username-here
+ansible_password=password-here
+ansible_become_passowrd=become-password-here
+```
+6. Now you can type
+```
+ansible-playbook ansible-install-docker.yml(name of file)
+
+```
+
+7. Once the machine has done all of the work for you, to start Docker you simply type:
+```
+sudo service docker start
+```
+
+8. Now, you can check that Docker has started:
+```
+sudo service docker status
+```
+
+##### To run the weatherapp using Ansible playbooks:
+
+1. Simply type:
+```
+ansible-playbook ansible-weatherapp.yml
+```
+into your terminal!
+
+Now, the app should be available at localhost:8081

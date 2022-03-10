@@ -4,7 +4,7 @@ Hei!
 
 I would like to say thank you for giving me the opportunity to attempt these tasks. I found them to be challenging, frustrating at times, and of course, rewarding. Through this README I will explain how to run the app both locally and with Docker, as well as how to install Docker and The Weather App using Ansible playbooks. 
 
-As I had never used any of these technologies before, this whole process was a huge learning experience for me, so I will go into detail about what I did for each of the tasks, the challenges I faced as well as how I solved some issues (SEE WIKI).
+As I had never used any of these technologies before, this whole process was a huge learning experience for me, so I will go into detail about what I did for each of the tasks, the challenges I faced as well as how I solved some issues [(SEE WIKI)](https://github.com/JordanClarkkk/weatherapp/wiki/Eficode-WeatherApp-Tasks-Commentary).
 
 ## TO RUN THE APP WITH/WITHOUT DOCKER
 
@@ -21,7 +21,7 @@ You can do this by following these simple steps:
 
 4. Open your terminal and type 
 ```
-git clone https://github.com/JordanClarkkk/weatherapp.git weatherapp
+git clone https://github.com/JordanClarkkk/weatherapp.git 
 ```
 5. You can now open in your editor if you would like to view the files.
 
@@ -80,7 +80,7 @@ sudo nano /etc/ansible/hosts
 insert.ip.address.here
 ```
 
-5. Add Docker vars:
+5. Add vars to hosts file:
 ```
 [docker:vars]
 ansible_user=type-username-here
@@ -89,7 +89,7 @@ ansible_become_passowrd=become-password-here
 ```
 6. Now you can type
 ```
-ansible-playbook ansible-install-docker.yml(name of file)
+ansible-playbook ansible-install-docker.yml
 
 ```
 

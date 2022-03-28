@@ -1,8 +1,6 @@
 # Weatherapp
 
-Hei!
-
-I would like to say thank you for giving me the opportunity to attempt these tasks. I found them to be challenging, frustrating at times, and of course, rewarding. Through this README I will explain how to run the app both locally and with Docker, as well as how to install Docker and run the Weather App using Ansible playbooks. 
+Through this README I will explain how to run the app both locally and with Docker, as well as how to install Docker and run the Weather App using Ansible playbooks. 
 
 As I had never used any of these technologies before, this whole process was a huge learning experience for me, so I will go into detail about what I did for each of the tasks, the challenges I faced as well as how I solved some issues [(SEE WIKI)](https://github.com/JordanClarkkk/weatherapp/wiki/Eficode-WeatherApp-Tasks-Commentary).
 
